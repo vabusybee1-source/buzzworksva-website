@@ -1,4 +1,322 @@
-/* Buzzworks VA Styles */
+/* ========================================
+   PROCESS OVERVIEW & TIMELINE
+======================================== */
+.process-overview {
+    padding: 5rem 0;
+    background-color: var(--cream);
+}
+
+.process-overview h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.timeline {
+    max-width: 900px;
+    margin: 3rem auto;
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--mint);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 80px;
+    margin-bottom: 3rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.day-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--sage-green);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(139, 157, 131, 0.3);
+}
+
+.timeline-content {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.timeline-content h3 {
+    font-size: 1.8rem;
+    color: var(--sage-green);
+    margin-bottom: 0.5rem;
+}
+
+.timeline-duration {
+    color: var(--soft-peach);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-details h4 {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.timeline-details ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.timeline-details li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-gray);
+}
+
+.timeline-details li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--sage-green);
+    font-weight: bold;
+}
+
+.timeline-outcome {
+    background-color: var(--mint);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--sage-green);
+}
+
+.timeline-outcome strong {
+    color: var(--sage-green);
+}
+
+/* ========================================
+   TRIAL PERIOD
+======================================== */
+.trial-period {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.trial-period h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.trial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.trial-card {
+    background-color: var(--cream);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--mint);
+}
+
+.trial-card.highlighted {
+    border: 3px solid var(--sage-green);
+    background-color: var(--mint);
+}
+
+.trial-icon {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.trial-card h3 {
+    font-size: 1.5rem;
+    color: var(--sage-green);
+    margin-bottom: 1rem;
+}
+
+.trial-card p {
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+}
+
+.trial-card ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.trial-card li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-gray);
+}
+
+.trial-card li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--sage-green);
+    font-weight: bold;
+}
+
+.trial-options {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.option-box {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.option-box h4 {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+/* ========================================
+   ONGOING SUPPORT
+======================================== */
+.ongoing-support {
+    padding: 5rem 0;
+    background-color: var(--cream);
+}
+
+.ongoing-support h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.support-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.support-card:hover {
+    transform: translateY(-5px);
+}
+
+.support-card h3 {
+    font-size: 1.3rem;
+    color: var(--sage-green);
+    margin-bottom: 1rem;
+}
+
+.support-card p {
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+/* ========================================
+   COMPARISON TABLE
+======================================== */
+.differentiators {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.differentiators h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 3rem;
+}
+
+.comparison-table {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.comparison-header {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr;
+    background-color: var(--sage-green);
+    color: var(--white);
+    font-weight: bold;
+    padding: 1.5rem;
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--mint);
+}
+
+.comparison-row:last-child {
+    border-bottom: none;
+}
+
+.comparison-row:nth-child(even) {
+    background-color: var(--cream);
+}
+
+.feature-column {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.buzzworks-column {
+    text-align: center;
+    color: var(--text-gray);
+}
+
+.buzzworks-column.highlight {
+    color: var(--sage-green);
+    font-weight: bold;
+}
+
+.others-column {
+    text-align: center;
+    color: var(--text-gray);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== *//* Buzzworks VA Styles */
 
 /* ========================================
    BRAND COLORS
@@ -893,5 +1211,54 @@ a {
 
     .price {
         font-size: 2.5rem;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        padding-left: 60px;
+    }
+
+    .day-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .trial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-header,
+    .comparison-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .comparison-header div,
+    .comparison-row div {
+        padding: 0.5rem;
+    }
+
+    .feature-column {
+        background-color: var(--mint);
+        padding: 0.75rem !important;
+        border-radius: 5px;
+        font-size: 0.95rem;
+    }
+
+    .buzzworks-column,
+    .others-column {
+        padding-left: 1rem !important;
     }
 }
