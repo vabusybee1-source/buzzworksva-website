@@ -512,6 +512,295 @@ a {
 }
 
 /* ========================================
+   PAGE HEADER
+======================================== */
+.page-header {
+    background: linear-gradient(135deg, var(--sage-green) 0%, #6f8367 100%);
+    padding: 4rem 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.3rem;
+}
+
+/* ========================================
+   SERVICE DETAIL SECTIONS
+======================================== */
+.service-detail {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.service-detail.alternate {
+    background-color: var(--cream);
+}
+
+.service-badge {
+    display: inline-block;
+    background-color: var(--soft-peach);
+    color: var(--text-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.service-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.service-text h2 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.service-intro {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.service-text h3 {
+    font-size: 1.5rem;
+    color: var(--sage-green);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.detailed-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.detailed-list li {
+    padding: 0.75rem 0;
+    padding-left: 2rem;
+    position: relative;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.detailed-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--sage-green);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0 3rem;
+}
+
+.result-box {
+    background-color: var(--mint);
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 3px solid var(--sage-green);
+}
+
+.result-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--sage-green);
+    margin-bottom: 0.5rem;
+}
+
+.result-label {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    font-weight: 600;
+}
+
+/* ========================================
+   COMING SOON SERVICES
+======================================== */
+.coming-soon-services {
+    padding: 5rem 0;
+    background-color: var(--cream);
+}
+
+.coming-soon-services h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.coming-soon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.coming-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.coming-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.coming-card h3 {
+    font-size: 1.5rem;
+    color: var(--sage-green);
+    margin-bottom: 1rem;
+}
+
+.coming-card p {
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.coming-tag {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--soft-peach);
+    color: var(--text-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* ========================================
+   PRICING SECTION
+======================================== */
+.pricing-section {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.pricing-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.pricing-card {
+    background-color: var(--cream);
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid var(--mint);
+    transition: all 0.3s;
+    position: relative;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.pricing-card.featured {
+    border: 3px solid var(--sage-green);
+    background-color: var(--white);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--soft-peach);
+    color: var(--text-dark);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.pricing-card h3 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--sage-green);
+    margin-bottom: 0.5rem;
+}
+
+.price span {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    font-weight: normal;
+}
+
+.price-detail {
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+}
+
+.pricing-features {
+    list-style: none;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.pricing-features li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-gray);
+}
+
+.pricing-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--sage-green);
+    font-weight: bold;
+}
+
+.pricing-note {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    padding: 2rem;
+    background-color: var(--mint);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.pricing-note p {
+    color: var(--text-dark);
+    line-height: 1.8;
+}
+
+/* ========================================
    RESPONSIVE DESIGN
 ======================================== */
 @media (max-width: 768px) {
@@ -568,5 +857,41 @@ a {
 
     .social-links {
         justify-content: center;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-header p {
+        font-size: 1.1rem;
+    }
+
+    .service-text h2 {
+        font-size: 2rem;
+    }
+
+    .service-intro {
+        font-size: 1.1rem;
+    }
+
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .result-number {
+        font-size: 2rem;
+    }
+
+    .coming-soon-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price {
+        font-size: 2.5rem;
     }
 }
