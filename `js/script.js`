@@ -60,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // NOTE: You'll need to set up Google Apps Script first
 function submitToGoogleSheets(formData) {
     // This is the placeholder - we'll replace this URL with your Google Apps Script URL
-    const scriptURL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzSI4-_c-3WCo2gQpCAybvlzf-QWSDCuN6flLLLQ8cNQ-YjyOzZtq1ZSd0ViAUfZUTb/exec';
     
     // For now, just show the success message
     // Later we'll actually send the data
