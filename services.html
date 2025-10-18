@@ -1,398 +1,1380 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Buzzworks VA Services - Pre-trained Appointment Setters, Cold Callers, and Transaction Coordinators for real estate professionals. Starting at $6/hour.">
-    <title>Our Services - Buzzworks VA</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-wrapper">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="images/logo.png" alt="Buzzworks VA Logo">
-                    </a>
-                </div>
-                
-                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+/* ========================================
+   PROCESS OVERVIEW & TIMELINE
+======================================== */
+.process-overview {
+    padding: 5rem 0;
+    background-color: var(--cream);
+}
 
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="how-it-works.html">How It Works</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="#contact" class="cta-button">Get Your Free Consultation Today</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+.process-overview h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Our Specialized VA Services</h1>
-            <p>Pre-trained virtual assistants who know real estate from day one</p>
-        </div>
-    </section>
+.timeline {
+    max-width: 900px;
+    margin: 3rem auto;
+    position: relative;
+}
 
-    <!-- Service Detail: Appointment Setter -->
-    <section class="service-detail" id="appointment-setter">
-        <div class="container">
-            <div class="service-content">
-                <div class="service-text">
-                    <span class="service-badge">Real Estate Specialist</span>
-                    <h2>📞 Appointment Setter VA</h2>
-                    <p class="service-intro">Stop chasing leads and start closing deals. Our appointment setters handle all your warm lead follow-up, qualification, and calendar booking—so you can focus on face-to-face selling.</p>
-                    
-                    <h3>What They Do:</h3>
-                    <ul class="detailed-list">
-                        <li>Call 30-60 warm/hot leads from your CRM daily</li>
-                        <li>Qualify prospects on budget, timeline, and motivation</li>
-                        <li>Book appointments directly on your calendar</li>
-                        <li>Confirm appointments 24 hours before meeting</li>
-                        <li>Follow up with no-shows and reschedule</li>
-                        <li>Update CRM with detailed conversation notes</li>
-                        <li>Send automated meeting confirmations and reminders</li>
-                    </ul>
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--mint);
+}
 
-                    <h3>Ideal For:</h3>
-                    <ul class="detailed-list">
-                        <li>Agents with 5-20+ warm leads per week</li>
-                        <li>Professionals spending too much time on the phone</li>
-                        <li>Teams needing centralized appointment coordination</li>
-                        <li>Anyone with consistent lead flow from ads, referrals, or database</li>
-                    </ul>
+.timeline-item {
+    position: relative;
+    padding-left: 80px;
+    margin-bottom: 3rem;
+}
 
-                    <h3>Expected Results:</h3>
-                    <div class="results-grid">
-                        <div class="result-box">
-                            <div class="result-number">10-20</div>
-                            <div class="result-label">Appointments/Month</div>
-                        </div>
-                        <div class="result-box">
-                            <div class="result-number">5-10</div>
-                            <div class="result-label">Hours Saved/Week</div>
-                        </div>
-                        <div class="result-box">
-                            <div class="result-number">2-5</div>
-                            <div class="result-label">Extra Deals/Quarter</div>
-                        </div>
-                        <div class="result-box">
-                            <div class="result-number">70%+</div>
-                            <div class="result-label">Show Rate</div>
-                        </div>
-                    </div>
+.timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
 
-                    <a href="#contact" class="cta-button-large">Get Your Appointment Setter</a>
-                </div>
-            </div>
-        </div>
-    </section>
+.day-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: var(--sage-green);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(139, 157, 131, 0.3);
+}
 
-    <!-- Service Detail: Cold Caller -->
-    <section class="service-detail alternate" id="cold-caller">
-        <div class="container">
-            <div class="service-content">
-                <div class="service-text">
-                    <span class="service-badge">Lead Generation Specialist</span>
-                    <h2>🎯 Cold Caller VA</h2>
-                    <p class="service-intro">Need more leads? Our cold callers execute proven scripts to find motivated sellers and buyers from expired listings, FSBOs, and other cold lists—delivering qualified prospects ready to talk.</p>
-                    
-                    <h3>What They Do:</h3>
-                    <ul class="detailed-list">
-                        <li>Make 300-600 dials per day from your cold lists</li>
-                        <li>Execute proven scripts for expired, FSBO, and absentee owners</li>
-                        <li>Handle objections and gatekeepers professionally</li>
-                        <li>Identify motivated sellers and serious buyers</li>
-                        <li>Transfer hot leads to you immediately</li>
-                        <li>Set appointments with interested prospects</li>
-                        <li>Update CRM with disposition codes and notes</li>
-                        <li>Provide daily metrics and performance reports</li>
-                    </ul>
+.timeline-content {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
 
-                    <h3>Ideal For:</h3>
-                    <ul class="detailed-list">
-                        <li>Agents focused on prospecting and lead generation</li>
-                        <li>Real estate investors and wholesalers</li>
-                        <li>Teams in competitive markets needing more pipeline</li>
-                        <li>Anyone wanting to dominate FSBOs and expireds</li>
-                    </ul>
+.timeline-content h3 {
+    font-size: 1.8rem;
+    color: var(--sage-green);
+    margin-bottom: 0.5rem;
+}
 
-                    <h3>Expected Results:</h3>
-                    <div class="results-grid">
-                        <div class="result-box">
-                            <div class="result-number">300-600</div>
-                            <div class="result-label">Dials/Day</div>
-                        </div>
-                        <div class="result-box">
-                            <div class="result-number">5-20</div>
-                            <div class="result-label">Qualified Leads/Week</div>
-                        </div>
-                        <div class="result-box">
-                            <div class="result-number">3-10</div>
-                            <div class="result-label">Appointments/Week</div>
-                        </div>
-                        <div class="result-box">
-                            <div class="result-number">1-3</div>
-                            <div class="result-label">Extra Deals/Month</div>
-                        </div>
-                    </div>
+.timeline-duration {
+    color: var(--soft-peach);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
 
-                    <a href="#contact" class="cta-button-large">Get Your Cold Caller</a>
-                </div>
-            </div>
-        </div>
-    </section>
+.timeline-details h4 {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
 
-    <!-- Service Detail: Transaction Coordinator -->
-    <section class="service-detail" id="transaction-coordinator">
-        <div class="container">
-            <div class="service-content">
-                <div class="service-text">
-                    <span class="service-badge">Transaction Specialist</span>
-                    <h2>📋 Transaction Coordinator VA</h2>
-                    <p class="service-intro">Hate paperwork? Our transaction coordinators manage every detail from contract to close—tracking deadlines, coordinating vendors, and ensuring nothing falls through the cracks.</p>
-                    
-                    <h3>What They Do:</h3>
-                    <ul class="detailed-list">
-                        <li>Manage contracts from accepted offer to closing</li>
-                        <li>Track all key dates and contingency deadlines</li>
-                        <li>Coordinate with agents, lenders, title, and inspectors</li>
-                        <li>Ensure all paperwork is complete and compliant</li>
-                        <li>Send automated reminders for upcoming deadlines</li>
-                        <li>Update transaction management system daily</li>
-                        <li>Prepare closing documents and checklists</li>
-                        <li>Coordinate closing details and schedules</li>
-                        <li>Handle post-closing follow-up and documentation</li>
-                    </ul>
+.timeline-details ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
 
-                    <h3>Ideal For:</h3>
-                    <ul class="detailed-list">
-                        <li>Agents closing 15+ deals per year</li>
-                        <li>Teams with high transaction volume</li>
-                        <li>Professionals who hate administrative work</li>
-                        <li>Anyone who's lost a deal to missed deadlines</li>
-                    </ul>
+.timeline-details li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-gray);
+}
 
-                    <h3>Expected Results:</h3>
-                    <div class="results-grid">
-                        <div class="result-box">
-                            <div class="result-number">10-30</div>
-                            <div class="result-label">Transactions Managed</div>
-                        </div>
-                        <div class="result-box">
-                            <div class="result-number">95%+</div>
-                            <div class="result-label">On-Time Closings</div>
-                        </div>
-                        <div class="result-box">
-                            <div class="result-number">10-15</div>
-                            <div class="result-label">Hours Saved/Transaction</div>
-                        </div>
-                        <div class="result-box">
-                            <div class="result-number">Zero</div>
-                            <div class="result-label">Missed Deadlines</div>
-                        </div>
-                    </div>
+.timeline-details li:before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--sage-green);
+    font-weight: bold;
+}
 
-                    <a href="#contact" class="cta-button-large">Get Your Transaction Coordinator</a>
-                </div>
-            </div>
-        </div>
-    </section>
+.timeline-outcome {
+    background-color: var(--mint);
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--sage-green);
+}
 
-    <!-- Coming Soon Services -->
-    <section class="coming-soon-services">
-        <div class="container">
-            <h2>Expanding Our Services</h2>
-            <p class="section-subtitle">New VA specializations launching soon</p>
-            
-            <div class="coming-soon-grid">
-                <div class="coming-card">
-                    <div class="coming-icon">📱</div>
-                    <h3>Social Media Manager VA</h3>
-                    <p>Create content, schedule posts, engage followers, and grow your online presence. 3-7 posts per week with professional brand management.</p>
-                    <span class="coming-tag">Coming Soon</span>
-                </div>
+.timeline-outcome strong {
+    color: var(--sage-green);
+}
 
-                <div class="coming-card">
-                    <div class="coming-icon">💼</div>
-                    <h3>Executive Assistant VA</h3>
-                    <p>Calendar management, email filtering, travel arrangements, meeting prep, and high-level administrative support for busy executives.</p>
-                    <span class="coming-tag">Coming Soon</span>
-                </div>
+/* ========================================
+   TRIAL PERIOD
+======================================== */
+.trial-period {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
 
-                <div class="coming-card">
-                    <div class="coming-icon">⚙️</div>
-                    <h3>General Assistant VA</h3>
-                    <p>Data entry, research, customer service, file organization, and flexible administrative tasks based on your business needs.</p>
-                    <span class="coming-tag">Coming Soon</span>
-                </div>
-            </div>
-        </div>
-    </section>
+.trial-period h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
 
-    <!-- Pricing Section -->
-    <section class="pricing-section">
-        <div class="container">
-            <h2>Simple, Transparent Pricing</h2>
-            <p class="section-subtitle">No hidden fees. No long-term contracts. Cancel with 2 weeks notice.</p>
-            
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <div class="price">$960<span>/month</span></div>
-                    <p class="price-detail">Part-time (20 hours/week)</p>
-                    <ul class="pricing-features">
-                        <li>Any available VA role</li>
-                        <li>Bi-weekly billing</li>
-                        <li>Basic training included</li>
-                        <li>Email support</li>
-                    </ul>
-                    <a href="#contact" class="cta-button">Get Started</a>
-                </div>
+.trial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
 
-                <div class="pricing-card featured">
-                    <span class="popular-badge">Most Popular</span>
-                    <h3>Professional</h3>
-                    <div class="price">$1,920<span>/month</span></div>
-                    <p class="price-detail">Full-time (40 hours/week)</p>
-                    <ul class="pricing-features">
-                        <li>Choice of specialist VA</li>
-                        <li>Bi-weekly or monthly billing</li>
-                        <li>Comprehensive training</li>
-                        <li>Priority support</li>
-                        <li>Performance tracking</li>
-                    </ul>
-                    <a href="#contact" class="cta-button">Get Started</a>
-                </div>
+.trial-card {
+    background-color: var(--cream);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 2px solid var(--mint);
+}
 
-                <div class="pricing-card">
-                    <h3>Growth</h3>
-                    <div class="price">$3,840<span>/month</span></div>
-                    <p class="price-detail">Two full-time VAs</p>
-                    <ul class="pricing-features">
-                        <li>Mix & match VA roles</li>
-                        <li>Flexible billing options</li>
-                        <li>Advanced training</li>
-                        <li>Dedicated support</li>
-                        <li>Monthly strategy calls</li>
-                    </ul>
-                    <a href="#contact" class="cta-button">Get Started</a>
-                </div>
-            </div>
+.trial-card.highlighted {
+    border: 3px solid var(--sage-green);
+    background-color: var(--mint);
+}
 
-            <div class="pricing-note">
-                <p><strong>Risk-Free Trial:</strong> Pay only for the first 2 weeks to start. No setup fees. No security deposit until after your 1-month trial. Not satisfied? Free replacement or full refund.</p>
-            </div>
-        </div>
-    </section>
+.trial-icon {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Scale Your Business?</h2>
-            <p>Book a free consultation to discuss which VA service is right for you</p>
-            <a href="#contact" class="cta-button-large">Get Your Free Consultation Today</a>
-        </div>
-    </section>
+.trial-card h3 {
+    font-size: 1.5rem;
+    color: var(--sage-green);
+    margin-bottom: 1rem;
+}
 
-    <!-- Contact Form -->
-    <section class="contact-form" id="contact">
-        <div class="container">
-            <h2>Get Your Free Consultation</h2>
-            <p class="section-subtitle">Tell us about your business and we'll match you with the perfect VA</p>
-            
-            <form id="consultationForm" class="consultation-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="name">Full Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                </div>
+.trial-card p {
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+}
 
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="phone">Phone Number *</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="company">Company / Brokerage / Team</label>
-                        <input type="text" id="company" name="company">
-                    </div>
-                </div>
+.trial-card ul {
+    list-style: none;
+    margin-top: 1rem;
+}
 
-                <div class="form-group">
-                    <label for="message">Questions or When You'd Like to Schedule *</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
+.trial-card li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-gray);
+}
 
-                <button type="submit" class="cta-button-large">Submit Consultation Request</button>
-                
-                <p class="form-note">We'll respond within 2 hours during business hours (7am - 5pm EST)</p>
-            </form>
+.trial-card li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--sage-green);
+    font-weight: bold;
+}
 
-            <div id="formSuccess" class="form-success" style="display: none;">
-                <h3>Thank you! 🎉</h3>
-                <p>We've received your consultation request and will get back to you within 2 hours during business hours.</p>
-            </div>
-        </div>
-    </section>
+.trial-options {
+    margin-top: 1.5rem;
+    display: grid;
+    gap: 1rem;
+}
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="images/logo.png" alt="Buzzworks VA Logo">
-                    <p>Where Real Estate Meets Real Results</p>
-                </div>
+.option-box {
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+}
 
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="how-it-works.html">How It Works</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                    </ul>
-                </div>
+.option-box h4 {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
 
-                <div class="footer-contact">
-                    <h4>Get In Touch</h4>
-                    <p>Business Hours:<br>7am - 5pm EST</p>
-                    <div class="social-links">
-                        <a href="https://instagram.com/buzzworksva" target="_blank" rel="noopener" aria-label="Instagram">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                            </svg>
-                        </a>
-                        <a href="https://facebook.com/buzzworksva" target="_blank" rel="noopener" aria-label="Facebook">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
+/* ========================================
+   ONGOING SUPPORT
+======================================== */
+.ongoing-support {
+    padding: 5rem 0;
+    background-color: var(--cream);
+}
 
-            <div class="footer-bottom">
-                <p>&copy; 2024 Buzzworks VA. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+.ongoing-support h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
 
-    <script src="js/script.js"></script>
-</body>
-</html>
+.support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.support-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+
+.support-card:hover {
+    transform: translateY(-5px);
+}
+
+.support-card h3 {
+    font-size: 1.3rem;
+    color: var(--sage-green);
+    margin-bottom: 1rem;
+}
+
+.support-card p {
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+/* ========================================
+   COMPARISON TABLE
+======================================== */
+.differentiators {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.differentiators h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 3rem;
+}
+
+.comparison-table {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.comparison-header {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr;
+    background-color: var(--sage-green);
+    color: var(--white);
+    font-weight: bold;
+    padding: 1.5rem;
+}
+
+.comparison-row {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--mint);
+}
+
+.comparison-row:last-child {
+    border-bottom: none;
+}
+
+.comparison-row:nth-child(even) {
+    background-color: var(--cream);
+}
+
+.feature-column {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.buzzworks-column {
+    text-align: center;
+    color: var(--text-gray);
+}
+
+.buzzworks-column.highlight {
+    color: var(--sage-green);
+    font-weight: bold;
+}
+
+.others-column {
+    text-align: center;
+    color: var(--text-gray);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== *//* Buzzworks VA Styles */
+
+/* ========================================
+   BRAND COLORS
+======================================== */
+:root {
+    --sage-green: #8b9d83;
+    --soft-peach: #f6b5a7;
+    --mint: #c9d8c5;
+    --cream: #f8f9f6;
+    --white: #ffffff;
+    --text-dark: #2c3e32;
+    --text-gray: #5a6b5f;
+}
+
+/* ========================================
+   RESET & BASE STYLES
+======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--cream);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========================================
+   NAVIGATION
+======================================== */
+.navbar {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+    color: var(--sage-green);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: var(--sage-green);
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* ========================================
+   BUTTONS
+======================================== */
+.cta-button {
+    background-color: var(--sage-green);
+    color: var(--white);
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #6f8367;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 157, 131, 0.3);
+}
+
+.cta-button-large {
+    background-color: var(--sage-green);
+    color: var(--white);
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+}
+
+.cta-button-large:hover {
+    background-color: #6f8367;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(139, 157, 131, 0.4);
+}
+
+/* ========================================
+   HERO SECTION
+======================================== */
+.hero {
+    background: linear-gradient(135deg, var(--mint) 0%, var(--cream) 100%);
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: var(--text-gray);
+    margin-bottom: 1rem;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+}
+
+.hero-cta {
+    margin-top: 2rem;
+}
+
+.hours {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+/* ========================================
+   SERVICES OVERVIEW
+======================================== */
+.services-overview {
+    padding: 5rem 0;
+    background-color: var(--cream);
+}
+
+.services-overview h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    margin-bottom: 3rem;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.service-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: var(--sage-green);
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: var(--text-gray);
+    margin-bottom: 1.5rem;
+}
+
+.service-features {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.service-features li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-gray);
+}
+
+.service-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--sage-green);
+    font-weight: bold;
+}
+
+.service-link {
+    color: var(--sage-green);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.service-link:hover {
+    color: var(--soft-peach);
+}
+
+.coming-soon {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--mint);
+    border-radius: 10px;
+}
+
+.coming-soon p {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+}
+
+/* ========================================
+   WHY CHOOSE US
+======================================== */
+.why-choose {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.why-choose h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 3rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.benefit-card {
+    padding: 2rem;
+    background-color: var(--cream);
+    border-radius: 10px;
+    border-left: 4px solid var(--sage-green);
+}
+
+.benefit-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.benefit-card p {
+    color: var(--text-gray);
+}
+
+/* ========================================
+   CTA SECTION
+======================================== */
+.cta-section {
+    background: linear-gradient(135deg, var(--sage-green) 0%, #6f8367 100%);
+    padding: 4rem 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-section .cta-button-large {
+    background-color: var(--soft-peach);
+    color: var(--text-dark);
+}
+
+.cta-section .cta-button-large:hover {
+    background-color: #f4a091;
+}
+
+/* ========================================
+   CONTACT FORM
+======================================== */
+.contact-form {
+    padding: 5rem 0;
+    background-color: var(--cream);
+}
+
+.contact-form h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.consultation-form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: var(--white);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 2px solid var(--mint);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--sage-green);
+}
+
+.form-note {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-gray);
+}
+
+.form-success {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: var(--mint);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.form-success h3 {
+    color: var(--sage-green);
+    margin-bottom: 1rem;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+.footer {
+    background-color: var(--text-dark);
+    color: var(--white);
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-logo img {
+    height: 60px;
+    margin-bottom: 1rem;
+    filter: brightness(0) invert(1);
+}
+
+.footer-logo p {
+    color: var(--mint);
+    font-style: italic;
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    color: var(--sage-green);
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: var(--white);
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--sage-green);
+}
+
+.footer-contact p {
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background-color: var(--sage-green);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background-color: var(--soft-peach);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ========================================
+   PAGE HEADER
+======================================== */
+.page-header {
+    background: linear-gradient(135deg, var(--sage-green) 0%, #6f8367 100%);
+    padding: 4rem 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.3rem;
+}
+
+/* ========================================
+   SERVICE DETAIL SECTIONS
+======================================== */
+.service-detail {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.service-detail.alternate {
+    background-color: var(--cream);
+}
+
+.service-badge {
+    display: inline-block;
+    background-color: var(--soft-peach);
+    color: var(--text-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.service-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.service-text h2 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.service-intro {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.service-text h3 {
+    font-size: 1.5rem;
+    color: var(--sage-green);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.detailed-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.detailed-list li {
+    padding: 0.75rem 0;
+    padding-left: 2rem;
+    position: relative;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.detailed-list li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--sage-green);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0 3rem;
+}
+
+.result-box {
+    background-color: var(--mint);
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    text-align: center;
+    border: 3px solid var(--sage-green);
+}
+
+.result-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--sage-green);
+    margin-bottom: 0.5rem;
+}
+
+.result-label {
+    font-size: 0.9rem;
+    color: var(--text-gray);
+    font-weight: 600;
+}
+
+/* ========================================
+   COMING SOON SERVICES
+======================================== */
+.coming-soon-services {
+    padding: 5rem 0;
+    background-color: var(--cream);
+}
+
+.coming-soon-services h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.coming-soon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.coming-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    position: relative;
+}
+
+.coming-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.coming-card h3 {
+    font-size: 1.5rem;
+    color: var(--sage-green);
+    margin-bottom: 1rem;
+}
+
+.coming-card p {
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.coming-tag {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--soft-peach);
+    color: var(--text-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* ========================================
+   PRICING SECTION
+======================================== */
+.pricing-section {
+    padding: 5rem 0;
+    background-color: var(--white);
+}
+
+.pricing-section h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.pricing-card {
+    background-color: var(--cream);
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid var(--mint);
+    transition: all 0.3s;
+    position: relative;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.pricing-card.featured {
+    border: 3px solid var(--sage-green);
+    background-color: var(--white);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--soft-peach);
+    color: var(--text-dark);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.pricing-card h3 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--sage-green);
+    margin-bottom: 0.5rem;
+}
+
+.price span {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    font-weight: normal;
+}
+
+.price-detail {
+    color: var(--text-gray);
+    margin-bottom: 2rem;
+}
+
+.pricing-features {
+    list-style: none;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.pricing-features li {
+    padding: 0.75rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    color: var(--text-gray);
+}
+
+.pricing-features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--sage-green);
+    font-weight: bold;
+}
+
+.pricing-note {
+    max-width: 800px;
+    margin: 3rem auto 0;
+    padding: 2rem;
+    background-color: var(--mint);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.pricing-note p {
+    color: var(--text-dark);
+    line-height: 1.8;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        padding: 2rem 0;
+        gap: 1rem;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .consultation-form {
+        padding: 2rem 1.5rem;
+    }
+
+    .cta-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-header p {
+        font-size: 1.1rem;
+    }
+
+    .service-text h2 {
+        font-size: 2rem;
+    }
+
+    .service-intro {
+        font-size: 1.1rem;
+    }
+
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .result-number {
+        font-size: 2rem;
+    }
+
+    .coming-soon-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price {
+        font-size: 2.5rem;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        padding-left: 60px;
+    }
+
+    .day-number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .trial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .support-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comparison-header,
+    .comparison-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .comparison-header div,
+    .comparison-row div {
+        padding: 0.5rem;
+    }
+
+    .feature-column {
+        background-color: var(--mint);
+        padding: 0.75rem !important;
+        border-radius: 5px;
+        font-size: 0.95rem;
+    }
+
+    .buzzworks-column,
+    .others-column {
+        padding-left: 1rem !important;
+    }
+}
+
+/* ========================================
+   FAQ SECTION
+======================================== */
+.faq-section {
+    padding: 5rem 0;
+    background-color: var(--cream);
+}
+
+.faq-category {
+    max-width: 900px;
+    margin: 0 auto 4rem;
+}
+
+.faq-category h2 {
+    font-size: 2rem;
+    color: var(--sage-green);
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--mint);
+}
+
+.faq-item {
+    background-color: var(--white);
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 1.5rem;
+    background-color: var(--white);
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.faq-question:hover {
+    background-color: var(--mint);
+    color: var(--sage-green);
+}
+
+.faq-icon {
+    font-size: 1.5rem;
+    color: var(--sage-green);
+    transition: transform 0.3s;
+    font-weight: bold;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: var(--cream);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in;
+}
+
+.faq-answer p,
+.faq-answer ul {
+    padding: 0 1.5rem;
+    color: var(--text-gray);
+    line-height: 1.8;
+}
+
+.faq-answer p {
+    margin: 1rem 0;
+}
+
+.faq-answer ul {
+    list-style: none;
+    margin: 1rem 0;
+    padding-left: 3rem;
+}
+
+.faq-answer li {
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.faq-answer li:before {
+    content: "•";
+    position: absolute;
+    left: -1.5rem;
+    color: var(--sage-green);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.faq-answer li strong {
+    color: var(--text-dark);
+}
+
+.faq-answer > *:first-child {
+    padding-top: 1.5rem;
+}
+
+.faq-answer > *:last-child {
+    padding-bottom: 1.5rem;
+}
