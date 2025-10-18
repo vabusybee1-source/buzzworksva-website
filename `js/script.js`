@@ -49,25 +49,35 @@ document.addEventListener('DOMContentLoaded', function() {
                 timestamp: new Date().toISOString()
             };
 
-            // Here we'll add Google Sheets integration later
-            // For now, show success message
+            // Submit to Google Sheets
             submitToGoogleSheets(formData);
         });
     }
+
+    // FAQ Accordion
+    const faqQuestions = document.querySelectorAll('.faq-question');
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+            const faqItem = this.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Toggle current item
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        });
+    });
 });
 
 // Google Sheets Submission Function
-// NOTE: You'll need to set up Google Apps Script first
 function submitToGoogleSheets(formData) {
-    // This is the placeholder - we'll replace this URL with your Google Apps Script URL
     const scriptURL = 'https://script.google.com/macros/s/AKfycbzSI4-_c-3WCo2gQpCAybvlzf-QWSDCuN6flLLLQ8cNQ-YjyOzZtq1ZSd0ViAUfZUTb/exec';
     
-    // For now, just show the success message
-    // Later we'll actually send the data
-    showSuccessMessage();
-    
-    // Uncomment this when you have your Google Apps Script URL:
-    /*
     fetch(scriptURL, {
         method: 'POST',
         body: JSON.stringify(formData),
@@ -84,7 +94,6 @@ function submitToGoogleSheets(formData) {
         console.error('Error:', error);
         alert('There was an error submitting your form. Please try again or email us directly.');
     });
-    */
 }
 
 function showSuccessMessage() {
