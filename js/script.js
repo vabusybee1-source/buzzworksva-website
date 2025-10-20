@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Google Sheets Submission Function
 function submitToGoogleSheets(formData) {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzSI4-_c-3WCo2gQpCAybvlzf-QWSDCuN6flLLLQ8cNQ-YjyOzZtq1ZSd0ViAUfZUTb/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx7gUKdx3CrA63CQIB9iylh-QfB0eZefkAH6fT7ndr9nAQasdYOaEo1vYqkl5I8d7hi/exec';
     
     fetch(scriptURL, {
         method: 'POST',
