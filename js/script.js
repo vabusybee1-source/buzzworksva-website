@@ -1,4 +1,4 @@
-// Buzzworks VA Scripts
+// Buzzworks VA Scripts - FIXED VERSION
 
 // Mobile Menu Toggle
 document.addEventListener('DOMContentLoaded', function() {
@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 phone: document.getElementById('phone').value,
                 company: document.getElementById('company').value,
                 message: document.getElementById('message').value,
-                timestamp: new Date().toISOString()
+                timestamp: new Date().toLocaleString()
             };
 
             // Submit to Google Sheets
@@ -74,25 +74,45 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Google Sheets Submission Function
+// Google Sheets Submission Function - FIXED VERSION
 function submitToGoogleSheets(formData) {
     const scriptURL = 'https://script.google.com/macros/s/AKfycbx7gUKdx3CrA63CQIB9iylh-QfB0eZefkAH6fT7ndr9nAQasdYOaEo1vYqkl5I8d7hi/exec';
     
+    // Disable submit button to prevent double submission
+    const submitBtn = document.querySelector('button[type="submit"]');
+    const originalBtnText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Submitting...';
+    
+    // Convert formData to URLSearchParams (this is what Google Apps Script expects)
+    const params = new URLSearchParams();
+    params.append('name', formData.name);
+    params.append('email', formData.email);
+    params.append('phone', formData.phone);
+    params.append('company', formData.company);
+    params.append('message', formData.message);
+    params.append('timestamp', formData.timestamp);
+    
     fetch(scriptURL, {
         method: 'POST',
-        body: JSON.stringify(formData),
-        headers: {
-            'Content-Type': 'application/json'
-        }
+        body: params
     })
     .then(response => response.json())
     .then(data => {
         console.log('Success:', data);
         showSuccessMessage();
+        
+        // Re-enable button
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
     })
     .catch((error) => {
         console.error('Error:', error);
         alert('There was an error submitting your form. Please try again or email us directly.');
+        
+        // Re-enable button
+        submitBtn.disabled = false;
+        submitBtn.textContent = originalBtnText;
     });
 }
 
