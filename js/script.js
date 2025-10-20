@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Google Sheets Submission Function - FIXED VERSION
 function submitToGoogleSheets(formData) {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbx7gUKdx3CrA63CQIB9iylh-QfB0eZefkAH6fT7ndr9nAQasdYOaEo1vYqkl5I8d7hi/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzTIdcAoGaY2axiDFV5ccE1gTHfnErLs8rXEJt6gV-vRo9FPEIDdOXenrsFL47FdpKx/exec';
     
     // Disable submit button to prevent double submission
     const submitBtn = document.querySelector('button[type="submit"]');
